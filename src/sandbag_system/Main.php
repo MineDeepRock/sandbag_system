@@ -29,7 +29,9 @@ class Main extends PluginBase implements Listener
         $attacker = $event->getDamager();
         $victim = $event->getEntity();
 
-        if ($victim instanceof SandbagEntity || $attacker instanceof Player) {
+        if ($victim instanceof SandbagEntity && $attacker instanceof Player) {
+            $event->setAttackCooldown(0);
+            $event->setKnockBack(0);
             $item = $attacker->getInventory()->getItemInHand();
             if ($item instanceof SandbagRemoveItem) {
                 $victim->setInvisible(true);
