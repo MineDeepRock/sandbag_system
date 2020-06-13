@@ -2,10 +2,9 @@
 
 namespace sandbag_system;
 
-use mine_deep_rock\pmmp\commands\NPCCommand;
+use pocketmine\entity\Entity;
 use pocketmine\event\entity\EntityDamageByEntityEvent;
 use pocketmine\event\entity\EntityDeathEvent;
-use pocketmine\event\entity\EntityDespawnEvent;
 use pocketmine\event\Listener;
 use pocketmine\nbt\tag\CompoundTag;
 use pocketmine\nbt\tag\DoubleTag;
@@ -21,6 +20,7 @@ use sandbag_system\pmmp\items\SandbagRemoveItem;
 class Main extends PluginBase implements Listener
 {
     public function onEnable() {
+        Entity::registerEntity(SandbagEntity::class, true, ['Sandbag']);
         $this->getServer()->getPluginManager()->registerEvents($this, $this);
         $this->getServer()->getCommandMap()->register("sandbag", new SandbagCommand());
     }
