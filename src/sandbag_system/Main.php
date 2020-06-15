@@ -2,6 +2,8 @@
 
 namespace sandbag_system;
 
+use gun_system\GunSystem;
+use gun_system\pmmp\items\ItemGun;
 use pocketmine\entity\Entity;
 use pocketmine\event\entity\EntityDamageByEntityEvent;
 use pocketmine\event\entity\EntityDeathEvent;
@@ -36,7 +38,12 @@ class Main extends PluginBase implements Listener
             if ($item instanceof SandbagRemoveItem) {
                 $victim->setInvisible(true);
                 $victim->kill();
+            } else if ($item instanceof ItemGun) {
+                $isFinisher = $victim->getHealth() - $event->getFinalDamage() <= 0;
+                GunSystem::sendHitMessage($attacker, $isFinisher);
+                GunSystem::sendHitParticle($victim->getLevel(), $victim->getPosition(), $event->getFinalDamage(), $isFinisher);
             }
+            return;
         }
     }
 
