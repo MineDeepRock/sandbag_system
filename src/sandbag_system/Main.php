@@ -3,7 +3,7 @@
 namespace sandbag_system;
 
 use gun_system\GunSystem;
-use gun_system\pmmp\items\ItemGun;
+use gun_system\pmmp\item\ItemGun;
 use pocketmine\entity\Entity;
 use pocketmine\event\entity\EntityDamageByEntityEvent;
 use pocketmine\event\entity\EntityDeathEvent;
