@@ -1,5 +1,5 @@
 {
-  "name": "suinua/sandbag_system",
+  "name": "mine_deep_rock/sandbag_system",
   "authors": [
     {
       "name": "suinua"
@@ -15,52 +15,18 @@
   "repositories": [
     {
       "type": "git",
-      "url": "https://github.com/pmmp/PocketMine-MP"
-    },
-    {
-      "type": "git",
-      "url": "https://github.com/pmmp/RakLib"
-    },
-    {
-      "type": "git",
-      "url": "https://github.com/pmmp/SPL"
-    },
-    {
-      "type": "git",
-      "url": "https://github.com/pmmp/BinaryUtils"
-    },
-    {
-      "type": "git",
-      "url": "https://github.com/pmmp/NBT"
-    },
-    {
-      "type": "git",
-      "url": "https://github.com/pmmp/Math"
-    },
-    {
-      "type": "git",
-      "url": "https://github.com/pmmp/Snooze"
-    },
-    {
-      "type": "git",
-      "name": "suinua/slot_menu_system",
+      "name": "mine_deep_rock/slot_menu_system",
       "url": "https://github.com/MineDeepRock/slot_menu_system"
     },
     {
       "type": "git",
-      "name": "suinua/gun_system",
+      "name": "mine_deep_rock/gun_system",
       "url": "https://github.com/MineDeepRock/gun_system"
     }
   ],
   "require": {
-    "pocketmine/pocketmine-mp": "3.14.2",
-    "pocketmine/raklib": "*",
-    "pocketmine/spl": "*",
-    "pocketmine/binaryutils": "*",
-    "pocketmine/nbt": "*",
-    "pocketmine/math": "*",
-    "pocketmine/snooze": "*",
-    "suinua/slot_menu_system": "dev-master",
-    "suinua/gun_system": "dev-master"
+    "pocketmine/pocketmine-mp": "*",
+    "mine_deep_rock/slot_menu_system": "dev-master",
+    "mine_deep_rock/gun_system": "dev-master"
   }
 }
