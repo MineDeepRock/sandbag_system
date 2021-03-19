@@ -13,7 +13,7 @@ use pocketmine\nbt\tag\ListTag;
 use pocketmine\Player;
 use sandbag_system\pmmp\entities\SandbagEntity;
 use sandbag_system\pmmp\items\SandbagRemoveItem;
-use slot_menu_system\models\SlotMenuElement;
+use slot_menu_system\SlotMenuElement;
 use slot_menu_system\pmmp\items\SlotMenuElementItem;
 
 class SandbagCommand extends Command
